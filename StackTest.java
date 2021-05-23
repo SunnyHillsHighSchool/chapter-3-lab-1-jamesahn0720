@@ -18,15 +18,36 @@ public class StackTest
 
  public StackTester(String line)
  {
+  stack = new Stack<String>();
+   String[] arr = line.split(" ");
+   for(String x : arr)
+   {
+     stack.push(x);
+   }
  }
  
  public void setStack(String line)
  {
+   stack = new Stack<String>();
+   String[] arr = line.split(" ");
+   for(String x : arr)
+   {
+     stack.push(x);
+   }
  }
 
  public void popEmAll()
  {
+   while(!stack.empty())
+   {
+     System.out.print(stack.pop()+" ");
+   }
+   System.out.println("\n");
  }
 
  //add a toString
+ public String toString()
+ {
+   return "";
+ }
 }
